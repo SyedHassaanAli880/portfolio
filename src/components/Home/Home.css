@@ -1,0 +1,156 @@
+/* Background and Container Styling */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Default text color */
+    padding: 0 20px;
+}
+
+/* Card Styling */
+.card {
+    background: #1e1e1e; /* Slightly lighter background for the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 730px;
+    width: 500%; /* Ensure the card takes up full width of its container */
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #00ffc3; /* Vibrant border for profile picture */
+}
+
+/* Content Centering and Alignment */
+.content {
+    text-align: center;
+}
+
+/* Name Styling */
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00ffc3; /* Vibrant color for the name */
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 255, 195, 0.3);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Designation Styling */
+.designation {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #00ffc3; /* Another vibrant color for the designation */
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(255, 0, 255, 0.3);
+    animation: fadeIn 3s ease-out;
+}
+
+/* Introduction Section Styling */
+.introduction {
+    margin-top: 40px;
+    animation: fadeIn 4s ease-out;
+}
+
+.intro-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00ffc3; /* Match the color of the name for consistency */
+    text-shadow: 2px 2px 4px rgba(0, 255, 195, 0.3);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-right: 90px;
+    margin-right: 1rem;
+    color: #ffffff; /* Keep the text white for readability */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 5s ease-out;
+    text-align: left; /* Ensure text alignment is left */
+    display: block; /* Ensure it's treated as a block-level element */
+}
+
+
+.interests {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    margin-right: 90px;
+    color: #ffffff; /* Keep the text white for readability */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 5s ease-out;
+    text-align: left; /* Ensure text alignment is left */
+    display: block; /* Ensure it's treated as a block-level element */
+}
+
+.hobbies{
+    font-size: 1.2rem;
+    margin-right: 918px;
+    color: #ffffff; /* Keep the text white for readability */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 5s ease-out;
+}
+
+/* Hobbies List Styling */
+.hobbies-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hobbies-list li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Connect Section Styling */
+.connect {
+    margin-top: 50px;
+    animation: fadeIn 6s ease-out;
+}
+
+.social-link {
+    color: #ffffff; /* Default color for the icons */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.social-link:hover {
+    color: #00ffc3; /* Color when hovered */
+}
+
+
+.connect-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00ffc3; /* Match the color of the designation for consistency */
+    text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.3);
+}
+
+.social-link {
+    margin: 0 10px;
+    color: #000; /* Change to your preferred color */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #0073b1; /* Change color on hover */
+}
+
+/* Add subtle animations for a stunning effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
