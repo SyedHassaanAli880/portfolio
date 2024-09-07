@@ -9,7 +9,10 @@ import slack from './slack.png';
 import dotnetcore from './dotnetcore.png';
 import sqlserver from './sqlserver.png';
 import githubdesktop from './GitHubDesktop.png';
+import csharp from './c#.png';
+import javascript from './JS.png';
 import vscode from './vscode.png';
+import visualstudio from './visualstudio.png';
 
 const Tools = () => {
  
@@ -31,8 +34,8 @@ const Tools = () => {
     },
     {
       id: 4,
-      title: 'Notepad++',
-      imageUrl: notepadplusplus
+      title: 'Postman',
+      imageUrl: postman
     },
     {
         id: 5,
@@ -41,8 +44,8 @@ const Tools = () => {
       },
       {
         id: 6,
-        title: 'Slack',
-        imageUrl: slack
+        title: 'Visual Studio',
+        imageUrl: visualstudio
       },
       {
         id: 7,
@@ -63,6 +66,26 @@ const Tools = () => {
         id: 10,
         title: 'ADO .NET',
         imageUrl: adodotnet
+      },
+      {
+        id:11,
+        title: 'Notepad++',
+        imageUrl: notepadplusplus
+      },
+      {
+        id:12,
+        title: 'C#',
+        imageUrl: csharp
+      },
+      {
+        id:13,
+        title: 'Javascript',
+        imageUrl: javascript
+      },
+      {
+        id:14,
+        title: 'Slack',
+        imageUrl: slack
       }
   ];
 
@@ -74,7 +97,7 @@ const Tools = () => {
           textAlign: 'center'
         }}
       >
-        <h2>Following are the tools, technologies, and frameworks that I use and have worked on:</h2>
+        <h2>Following are the tools, programming languages and frameworks that I use and have worked on:</h2>
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px' }}>
