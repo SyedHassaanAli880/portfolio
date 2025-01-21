@@ -12,16 +12,16 @@ const Navbar = () => {
                         <i className="fas fa-home"></i> Home
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/projects">
                         <i className="fas fa-project-diagram"></i> Projects
                     </Link>
                 </li>
                 <li>
                     <Link to="/tools">
-                        <i className="fas fa-server"></i> Tools & Frameworks
+                        <i className="fas fa-server"></i> TECHNOLOGIES
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <a href="/Hassan Ali - resume.pdf" download="Hassan Ali - resume.pdf">
                         <i className="fas fa-file-download"></i> Resume

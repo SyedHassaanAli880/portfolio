@@ -6,7 +6,7 @@ import Navbar from './components/NavBar/NavBar';
 import Resume from './components/Resume/Resume';
 import Projects from './components/Projects/Projects';
 import Tools from './components/Tools/Tools';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -16,9 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/tools" element={<Tools />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
+      <Tools />
+      <Projects />
       <Footer />
     </Router>
   );

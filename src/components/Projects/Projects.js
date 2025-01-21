@@ -40,77 +40,45 @@ const Projects = () => {
 
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>
-      
-      {/* Mapping through the projectData array to display cards */}
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px' }}>
-        {projectData.map((project) => (
-          <div 
-            key={project.id} 
-            style={{ 
-              border: '1px solid #ddd', 
-              borderRadius: '8px', 
-              padding: '20px', 
-              width: '300px', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              justifyContent: 'space-between' 
-            }}
-          >
-            <img 
-              src={project.imageUrl} 
-              alt={project.title} 
-              style={{ 
-                width: '100%', 
-                height: '239px', 
-                objectFit: 'cover', 
-                borderRadius: '8px 8px 0 0' 
-              }} 
-            />
-            <h3 style={{ margin: '15px 0' }}>{project.title}</h3>
-            <p style={{ flexGrow: 1, minHeight: '60px' }}>{project.description}</p>
-            {
-              project.title === 'Global Post' ? (
-                <button 
-                className='website-button' 
-                style={{
-                  fontWeight: '800', 
-                  marginTop: 'auto', 
-                  padding: '10px', 
-                  backgroundColor: '#333', 
-                  color: 'white', 
-                  border: 'none', 
-                  borderRadius: '4px', 
-                  cursor: 'pointer',
-                  transition: 'box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out'
-                }}
-                onClick={() => window.open(project.repoUrl, '_blank') }
-              >
-                <i className="fas fa-globe"></i> WEBSITE
-              </button>
-              
-              ) : (
-                <button 
-                  className='github-button' 
-                  style={{ 
-                    fontWeight: '800',
-                    marginTop: 'auto',
-                    padding: '10px',
-                    backgroundColor: '#333',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px', 
-                    cursor: 'pointer' ,
-                    transition: 'box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out'
-                  }}
-                  onClick={() => window.open(project.repoUrl, '_blank') }
-                  >
-                  <i className="fab fa-github"></i> GITHUB
-                </button>
-              )
-            }
+      <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h2 class="font-bold text-white">PROJECTS I HAVE DELIVERED</h2>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <h2 class="text-black text-lg title-font font-medium">BMS</h2>
           </div>
-        ))}
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">A simple billing management system desktop application built in .NET windows forms to manage all sorts of bills and invoices of a store/mart. The database used is MS SQL Server with ADO .NET for data accessing.</p>
+          </div>
+        </div>
       </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <h2 class="text-black text-lg title-font font-medium">IMS</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">A simple inventory management system desktop application made in .NET windows forms to manage stocks, suppliers, users, and purchase invoices etc. The database used is MS SQL Server with ADO .NET for data accessing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/3">
+        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+          <div class="flex items-center mb-3">
+            <h2 class="text-black text-lg title-font font-medium">Global Post</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">GlobalPost offers a range of domestic and international shipping solutions that simplifies parcel shipping while saving you money. By combining our easy-to-use technology and seamless integrations with the world’s top shipping platforms, we help e-commerce and warehouse sellers succeed domestically and around the world. Global Post is built using .NET 8 microservices architecture, React.js, MS SQL Server and REST APIs. Global Post is not an open-source software.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
