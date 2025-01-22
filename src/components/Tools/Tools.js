@@ -18,7 +18,7 @@ const Tools = () => {
   return (
     <div class='text-center mt-8'>
   <h1 class="font-bold">TECHNOLOGIES I USE</h1>
-  <div class="flex flex-wrap justify-center items-center gap-8 mt-4">
+  <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
     <div class="flex flex-col items-center">
       <i class="fa-brands fa-react text-white-400 text-7xl px-6"></i>
       <h6 class="mt-2 text-center text-white">React.js</h6>

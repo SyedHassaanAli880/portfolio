@@ -3,7 +3,10 @@ import BMS from './BMS.png';
 import IMS from './IMS.webp';
 import GP from './GP.png';
 import e from './e.png';
-import './Projects.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Projects = () => {
  
@@ -39,46 +42,69 @@ const Projects = () => {
   ];
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h2 class="font-bold text-white">PROJECTS I HAVE DELIVERED</h2>
-    </div>
-    <div class="flex flex-wrap -m-4">
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h2 class="text-black text-lg title-font font-medium">BMS</h2>
+    <div className="text-center p-5">
+      <section className="body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-col text-center w-full mb-8">
+            <h2 className="font-bold text-white">PROJECTS I HAVE DELIVERED</h2>
           </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">A simple billing management system desktop application built in .NET windows forms to manage all sorts of bills and invoices of a store/mart. The database used is MS SQL Server with ADO .NET for data accessing.</p>
-          </div>
+          <Swiper 
+            modules={[Pagination, Navigation, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            navigation
+            autoplay={{
+              delay: 9000, // Delay between slides in milliseconds
+              disableOnInteraction: false, // Keeps autoplay even after user interaction
+            }}
+            breakpoints={{
+              768: { slidesPerView: 1 },
+              1024: { slidesPerView: 1 },
+            }}
+          >
+            <SwiperSlide>
+              <div className="flex flex-col h-full bg-[#121212] p-8 rounded-lg w-full max-w-xs mx-auto">
+                <img src={BMS} alt="BMS" className="w-full h-48 object-cover rounded-lg mb-3" />
+                <h1 className="text-white text-lg title-font font-medium flex-shrink-0 font-extrabold">BMS</h1>
+                <p className="leading-relaxed text-base text-white h-auto text-justify">
+                A simple billing management system desktop application built in .NET windows forms to manage all sorts of bills and invoices of a store/mart. The database used is MS SQL Server with ADO .NET for data accessing.
+                </p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-xs mx-auto">
+                <img src={IMS} alt="IMS" className="w-full h-48 object-cover rounded-lg mb-3" />
+                <h2 className="text-white text-lg title-font font-medium font-extrabold">IMS</h2>
+                <p className="leading-relaxed text-base text-white h-auto text-justify">
+                A simple inventory management system desktop application made in .NET windows forms to manage stocks, suppliers, users, and purchase invoices etc. The database used is MS SQL Server with ADO .NET for data accessing.
+                </p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-xs mx-auto">
+                <img src={GP} alt="Global Post" className="w-full h-48 object-cover rounded-lg mb-3" />
+                <h2 className="text-white text-lg title-font font-medium font-extrabold">GLOBAL POST</h2>
+                <p className="leading-relaxed text-base text-white h-auto text-justify">
+                GlobalPost from Auctane is a shipping solution that offers cost-effective domestic and international parcel shipping services. It integrates with e-commerce platforms & shipping carriers to provide automated customs forms & tracking services. It is built on .NET 8 microservices architecture, React.js & MS SQL Server.
+                </p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-xs mx-auto">
+                <img src={e} alt="KhareedLo" className="w-full h-48 object-cover rounded-lg mb-3" />
+                <h2 className="text-white text-lg title-font font-medium font-extrabold">KhareedLo</h2>
+                <p className="leading-relaxed text-base text-white h-auto text-justify">
+                KhareedLo which translates to "Buy it!" is a simple e-commerce website which includes a shopping cart, users, login, authentication and feedback functionality. Built on ASP .NET 5.0 MVC, the database used for this project is MS SQL Server with Entity framework core for ORM.
+                </p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h2 class="text-black text-lg title-font font-medium">IMS</h2>
-          </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">A simple inventory management system desktop application made in .NET windows forms to manage stocks, suppliers, users, and purchase invoices etc. The database used is MS SQL Server with ADO .NET for data accessing.</p>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 md:w-1/3">
-        <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-          <div class="flex items-center mb-3">
-            <h2 class="text-black text-lg title-font font-medium">Global Post</h2>
-          </div>
-          <div class="flex-grow">
-            <p class="leading-relaxed text-base">GlobalPost offers a range of domestic and international shipping solutions that simplifies parcel shipping while saving you money. By combining our easy-to-use technology and seamless integrations with the world’s top shipping platforms, we help e-commerce and warehouse sellers succeed domestically and around the world. Global Post is built using .NET 8 microservices architecture, React.js, MS SQL Server and REST APIs. Global Post is not an open-source software.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
     </div>
   );
 };
