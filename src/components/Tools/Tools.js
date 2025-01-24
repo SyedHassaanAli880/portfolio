@@ -24,10 +24,6 @@ const Tools = () => {
       <h6 class="mt-2 text-center text-white">React.js</h6>
     </div>
     <div class="flex flex-col items-center">
-      <i class="fa-brands fa-slack text-white-400 text-7xl px-6"></i>
-      <h6 class="mt-2 text-center text-white">Slack</h6>
-    </div>
-    <div class="flex flex-col items-center">
       <i class="fa-duotone fa-solid fa-database text-white-400 text-7xl px-6"></i>
       <h6 class="mt-2 text-center text-white">Microsoft SQL Server</h6>
     </div>

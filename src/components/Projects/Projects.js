@@ -45,7 +45,7 @@ const Projects = () => {
     <div className="text-center p-5">
       <section className="body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-8">
+          <div className="flex flex-col text-center w-full mb-2">
             <h2 className="font-bold text-white">PROJECTS I HAVE DELIVERED</h2>
           </div>
           <Swiper 
@@ -55,7 +55,7 @@ const Projects = () => {
             pagination={{ clickable: true }}
             navigation
             autoplay={{
-              delay: 9000, // Delay between slides in milliseconds
+              delay: 7000, // Delay between slides in milliseconds
               disableOnInteraction: false, // Keeps autoplay even after user interaction
             }}
             breakpoints={{
@@ -64,42 +64,70 @@ const Projects = () => {
             }}
           >
             <SwiperSlide>
-              <div className="flex flex-col h-full bg-[#121212] p-8 rounded-lg w-full max-w-xs mx-auto">
+              <div className="flex flex-col h-full bg-[#121212] p-8 rounded-lg w-full max-w-[550px] mx-auto">
                 <img src={BMS} alt="BMS" className="w-full h-48 object-cover rounded-lg mb-3" />
-                <h1 className="text-white text-lg title-font font-medium flex-shrink-0 font-extrabold">BMS</h1>
+                <h1 className="text-white text-lg title-font font-medium flex-shrink-0 font-extrabold mb-4">BMS</h1>
                 <p className="leading-relaxed text-base text-white h-auto text-justify">
                 A simple billing management system desktop application built in .NET windows forms to manage all sorts of bills and invoices of a store/mart. The database used is MS SQL Server with ADO .NET for data accessing.
                 </p>
+                <button 
+                className="font-semibold mt-4 mb-2 p-[10px] bg-[#333] text-white border-none rounded-md cursor-pointer max-w-[250px] mx-auto
+                "
+                onClick={() => window.open('https://github.com/SyedHassaanAli880/Inventory-Management-System', '_blank')}
+              >
+                VIEW CODE
+              </button>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-xs mx-auto">
+              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-[550px] mx-auto">
                 <img src={IMS} alt="IMS" className="w-full h-48 object-cover rounded-lg mb-3" />
-                <h2 className="text-white text-lg title-font font-medium font-extrabold">IMS</h2>
+                <h2 className="text-white text-lg title-font font-medium font-extrabold mb-4">IMS</h2>
                 <p className="leading-relaxed text-base text-white h-auto text-justify">
-                A simple inventory management system desktop application made in .NET windows forms to manage stocks, suppliers, users, and purchase invoices etc. The database used is MS SQL Server with ADO .NET for data accessing.
+                A simple inventory management system desktop application made in .NET windows forms to manage stocks, suppliers, users, and purchase invoices etc.
                 </p>
+                <button 
+                className="font-semibold mt-4 mb-2 p-[10px] bg-[#333] text-white border-none rounded-md cursor-pointer max-w-[250px] mx-auto
+                "
+                onClick={() => window.open('https://github.com/SyedHassaanAli880/Inventory-Management-System', '_blank')}
+              >
+                VIEW CODE
+              </button>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-xs mx-auto">
+              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-[550px] mx-auto">
                 <img src={GP} alt="Global Post" className="w-full h-48 object-cover rounded-lg mb-3" />
-                <h2 className="text-white text-lg title-font font-medium font-extrabold">GLOBAL POST</h2>
+                <h2 className="text-white text-lg title-font font-medium font-extrabold mb-4">GLOBAL POST</h2>
                 <p className="leading-relaxed text-base text-white h-auto text-justify">
-                GlobalPost from Auctane is a shipping solution that offers cost-effective domestic and international parcel shipping services. It integrates with e-commerce platforms & shipping carriers to provide automated customs forms & tracking services. It is built on .NET 8 microservices architecture, React.js & MS SQL Server.
+                GlobalPost from Auctane is a shipping solution that offers cost-effective domestic and international parcel shipping services. It integrates with e-commerce platforms & shipping carriers to provide automated customs forms & tracking services.
                 </p>
+                <button 
+                className="font-semibold mt-4 mb-2 p-[10px] bg-[#333] text-white border-none rounded-md cursor-pointer max-w-[250px] mx-auto
+                "
+                onClick={() => window.open('https://www.goglobalpost.com/', '_blank')}
+              >
+                VIEW WEBSITE
+              </button>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-xs mx-auto">
+              <div className="flex rounded-lg h-full bg-[#121212] p-8 flex-col w-full max-w-[550px] mx-auto">
                 <img src={e} alt="KhareedLo" className="w-full h-48 object-cover rounded-lg mb-3" />
-                <h2 className="text-white text-lg title-font font-medium font-extrabold">KhareedLo</h2>
+                <h2 className="text-white text-lg title-font font-medium font-extrabold mb-4">KhareedLo</h2>
                 <p className="leading-relaxed text-base text-white h-auto text-justify">
-                KhareedLo which translates to "Buy it!" is a simple e-commerce website which includes a shopping cart, users, login, authentication and feedback functionality. Built on ASP .NET 5.0 MVC, the database used for this project is MS SQL Server with Entity framework core for ORM.
+                KhareedLo which translates to "Buy it!" is a simple e-commerce website which includes a shopping cart, users, login, authentication and feedback functionality.
                 </p>
+                <button 
+                className="font-semibold mt-4 mb-2 p-[10px] bg-[#333] text-white border-none rounded-md cursor-pointer max-w-[250px] mx-auto
+                "
+                onClick={() => window.open('https://github.com/SyedHassaanAli880/KhareedLo', '_blank')}
+              >
+                VIEW CODE
+              </button>
               </div>
             </SwiperSlide>
           </Swiper>
