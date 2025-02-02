@@ -45,9 +45,10 @@ const Projects = () => {
     <div className="text-center p-5">
       <section className="body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-2">
-            <h2 className="font-bold text-white">PROJECTS I HAVE DELIVERED</h2>
-          </div>
+          <h1 className="relative font-bold text-white text-3xl mb-8 inline-block group">
+            PROJECTS I HAVE DELIVERED
+            <span className="absolute left-0 bottom-[-4px] h-1 bg-green-500 w-0 transition-all duration-300 group-hover:w-full"></span>
+          </h1>
           <Swiper 
             modules={[Pagination, Navigation, Autoplay]}
             spaceBetween={30}
