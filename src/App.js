@@ -1,26 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import './App.css';
-import Home from './components/Home/Home';
-import Navbar from './components/NavBar/NavBar';
-import Resume from './components/Resume/Resume';
+import CustomNavbar from './components/NavBar/NavBar';
+import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 import Projects from './components/Projects/Projects';
 import Tools from './components/Tools/Tools';
-import Footer from './components/Footer';
-
+import Resume from './components/Resume/Resume';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+    };
+  }, []);
+
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/tools" element={<Tools />} />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
+    <>
+      <CustomNavbar />
+      <Hero />
+      <About />
+      <Projects />
+      <Tools />
+      <Resume />
+      <Contact />
       <Footer />
-    </Router>
+    </>
   );
 }
 

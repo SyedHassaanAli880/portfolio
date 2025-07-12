@@ -1,35 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
-
-const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <ul className="nav-links">
-                <li>
-                    <Link to="/">
-                        <i className="fas fa-home"></i> Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/projects">
-                        <i className="fas fa-project-diagram"></i> Projects
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/tools">
-                        <i className="fas fa-server"></i> Tools & Frameworks
-                    </Link>
-                </li>
-                <li>
-                    <a href="/Hassan Ali - resume.pdf" download="Hassan Ali - resume.pdf">
-                        <i className="fas fa-file-download"></i> Resume
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    );
+const CustomNavbar = () => {
+  return (
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="shadow-sm">
+      <Container>
+        <Navbar.Brand href="#home">Syed Hassaan Ali</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Nav.Link href="#tools">Tools</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 };
 
-export default Navbar;
+export default CustomNavbar;

@@ -1,134 +1,430 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
 import adodotnet from './adonet.png';
-import entityframrworkcore from './entityframeworkcore.png';
-import notepadplusplus from './notepadplusplus.png';
-import postman from './postman.png';
-import react from './react.png';
-import restapi from './restapi.png';
-import slack from './slack.png';
-import dotnetcore from './dotnetcore.png';
-import sqlserver from './sqlserver.png';
-import githubdesktop from './GitHubDesktop.png';
+import entityframeworkcoreLogo from './entityframeworkcore.png';
+import postmanLogo from './postman.png';
+import reactLogo from './react.png';
+import restapiLogo from './restapi.png';
+import sqlserverLogo from './sqlserver.png';
+import githubdesktopLogo from './GitHubDesktop.png';
 import csharp from './c#.png';
 import javascript from './JS.png';
-import vscode from './vscode.png';
-import visualstudio from './visualstudio.png';
+import vscodeLogo from './vscode.png';
+import visualstudioLogo from './visualstudio.png';
+
+function DotNetCore3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, process.env.PUBLIC_URL + '/dotnetcore.png');
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function React3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, reactLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function SqlServer3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, sqlserverLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function Postman3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, postmanLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function EntityFramework3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, entityframeworkcoreLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function VisualStudio3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, visualstudioLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function GithubDesktop3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, githubdesktopLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function RestApi3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, restapiLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function VSCode3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, vscodeLogo);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function AdoNet3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, adodotnet);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function CSharp3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, csharp);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
+
+function Javascript3DLogo() {
+  const texture = useLoader(THREE.TextureLoader, javascript);
+  const meshRef = React.useRef();
+  useFrame(() => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y += 0.01;
+      meshRef.current.rotation.x += 0.005;
+    }
+  });
+  return (
+    <mesh ref={meshRef} scale={[1.5, 1.5, 1.5]}>
+      <boxGeometry args={[2, 2, 2]} />
+      {[...Array(6)].map((_, i) => (
+        <meshStandardMaterial key={i} attach={`material-${i}`} map={texture} />
+      ))}
+    </mesh>
+  );
+}
 
 const Tools = () => {
- 
   const toolsData = [
-    {
-      id: 1,
-      title: '.NET Core',
-      imageUrl: dotnetcore
-    },
-    {
-      id: 2,
-      title: 'React.js',
-      imageUrl: react
-    },
-    {
-      id: 3,
-      title: 'MS SQL Server',
-      imageUrl: sqlserver,
-    },
-    {
-      id: 4,
-      title: 'Postman',
-      imageUrl: postman
-    },
-    {
-        id: 5,
-        title: 'Entity framework core',
-        imageUrl: entityframrworkcore
-      },
-      {
-        id: 6,
-        title: 'Visual Studio',
-        imageUrl: visualstudio
-      },
-      {
-        id: 7,
-        title: 'Github Desktop',
-        imageUrl: githubdesktop,
-      },
-      {
-        id: 8,
-        title: 'Rest API',
-        imageUrl: restapi
-      },
-      {
-        id: 9,
-        title: 'Visual Studio Code',
-        imageUrl: vscode
-      },
-      {
-        id: 10,
-        title: 'ADO .NET',
-        imageUrl: adodotnet
-      },
-      {
-        id:11,
-        title: 'Notepad++',
-        imageUrl: notepadplusplus
-      },
-      {
-        id:12,
-        title: 'C#',
-        imageUrl: csharp
-      },
-      {
-        id:13,
-        title: 'Javascript',
-        imageUrl: javascript
-      },
-      {
-        id:14,
-        title: 'Slack',
-        imageUrl: slack
-      }
+    { id: 1, imageUrl: process.env.PUBLIC_URL + '/dotnetcore.png', is3D: 'dotnet' },
+    { id: 2, imageUrl: reactLogo, is3D: 'react' },
+    { id: 3, imageUrl: sqlserverLogo, is3D: 'sqlserver' },
+    { id: 4, imageUrl: postmanLogo, is3D: 'postman' },
+    { id: 5, imageUrl: entityframeworkcoreLogo, is3D: 'entityframework' },
+    { id: 6, imageUrl: visualstudioLogo, is3D: 'visualstudio' },
+    { id: 7, imageUrl: githubdesktopLogo, is3D: 'githubdesktop' },
+    { id: 8, imageUrl: restapiLogo, is3D: 'restapi' },
+    { id: 9, imageUrl: vscodeLogo, is3D: 'vscode' },
+    { id: 10, imageUrl: adodotnet, is3D: 'adodotnet' },
+    { id: 11, imageUrl: csharp, is3D: 'csharp' },
+    { id: 12, imageUrl: javascript, is3D: 'javascript' }
   ];
 
   return (
-    <div style={{ textAlign: 'center'}}>
-      
-      <div 
-        style={{ 
-          textAlign: 'center'
-        }}
-      >
-        <h2>Following are the tools, programming languages and frameworks that I use and have worked on:</h2>
-      </div>
-
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px' }}>
-        {toolsData.map((tools) => (
-          <div 
-            key={tools.id} 
-            style={{ 
-              border: '1px solid #ddd', 
-              borderRadius: '8px', 
-              padding: '20px', 
-              width: '300px', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              justifyContent: 'space-between' 
-            }}
-          >
-            <img 
-              src={tools.imageUrl} 
-              alt={tools.title} 
-              style={{ 
-                width: '100%', 
-                height: '210px', 
-                objectFit: 'cover', 
-                borderRadius: '8px 8px 0 0' 
-              }} 
-            />
-            <h3 style={{ margin: '15px 0' }}>{tools.title}</h3>
-          </div>
-        ))}
-      </div>
-    </div>
+    <section id="tools" className="py-5 text-light">
+      <Container>
+        <h2 className="mb-5 text-center">TOOLS, LANGUAGES & FRAMEWORKS</h2>
+        <Row className="g-4 justify-content-center">
+          {toolsData.map((tool, idx) => (
+            <Col key={tool.id || idx} xs={12} sm={6} md={4} lg={3} xl={2}>
+              {tool.is3D === 'dotnet' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <DotNetCore3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">.NET Core</div>
+                </div>
+              ) : tool.is3D === 'react' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <React3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">React.js</div>
+                </div>
+              ) : tool.is3D === 'sqlserver' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <SqlServer3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">MS SQL Server</div>
+                </div>
+              ) : tool.is3D === 'postman' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <Postman3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Postman</div>
+                </div>
+              ) : tool.is3D === 'entityframework' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <EntityFramework3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Entity Framework Core</div>
+                </div>
+              ) : tool.is3D === 'visualstudio' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <VisualStudio3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Visual Studio</div>
+                </div>
+              ) : tool.is3D === 'githubdesktop' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <GithubDesktop3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Github Desktop</div>
+                </div>
+              ) : tool.is3D === 'restapi' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <RestApi3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Rest API</div>
+                </div>
+              ) : tool.is3D === 'vscode' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <VSCode3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Visual Studio Code</div>
+                </div>
+              ) : tool.is3D === 'adodotnet' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <AdoNet3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">ADO .NET</div>
+                </div>
+              ) : tool.is3D === 'csharp' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <CSharp3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">C#</div>
+                </div>
+              ) : tool.is3D === 'javascript' ? (
+                <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', flexDirection: 'column' }}>
+                  <Canvas camera={{ position: [0, 0, 5] }} style={{ height: '120px', width: '120px', background: 'transparent' }}>
+                    <ambientLight intensity={0.7} />
+                    <directionalLight position={[2, 2, 2]} intensity={0.7} />
+                    <Suspense fallback={null}>
+                      <Javascript3DLogo />
+                    </Suspense>
+                    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+                  </Canvas>
+                  <div className="fs-6 mt-3">Javascript</div>
+                </div>
+              ) : (
+                <Card className="h-100 shadow-sm text-center">
+                  <div style={{ height: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent' }}>
+                    <img src={tool.imageUrl} alt={tool.title} style={{ height: '100px', objectFit: 'contain', padding: '1rem', maxWidth: '100%' }} />
+                  </div>
+                  <Card.Body>
+                    <Card.Title className="fs-6">{tool.title}</Card.Title>
+                  </Card.Body>
+                </Card>
+              )}
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
   );
 };
 

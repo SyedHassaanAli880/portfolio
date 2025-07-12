@@ -1,0 +1,48 @@
+.connect {
+    position: absolute;
+    right: 0;
+    margin-bottom: 3%;
+    padding: 10px; /* Optional: adds some spacing around the icons */
+}
+
+.social-link {
+    margin: 0 10px;
+    color: #000; /* Change to your preferred color */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: #bb86fc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+  
+  .social-link {
+    color: #00ffc3;
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+  
+  .social-link:hover {
+    color: #fff; /* Adjust hover color */
+  }
+  
+  .copyright {
+    color: #00ffc3;
+  }
+  

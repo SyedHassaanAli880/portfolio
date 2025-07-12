@@ -9,7 +9,6 @@ const Home = () => {
                 <img src={profilePicture} alt="Profile" className="profile-picture" />
                 <div className="content">
                     <h1 className="name">Syed Hassaan Ali - Full Stack Software Developer</h1>
-                    
                     <div className="introduction">
                         <h2 className="intro-heading">LET ME INTRODUCE MYSELF</h2>
                         <p className="interests">
@@ -21,19 +20,6 @@ const Home = () => {
                             <i className="fas fa-circle" style={{ marginRight: '8px', color: '#00ffc3' }}></i> 
                             Other than web technologies, I also have an interest in Computer Vision and the Internet Of Things (IoT).
                         </p>
-                    </div>
-
-                    <div className="connect">
-                        <h2 className="connect-heading">FIND ME ON</h2>
-                        <a href="https://github.com/SyedHassaanAli880" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <i className="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/sayyad-hassaan-ali-0135921a5" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://x.com/hassanali520" target="_blank" rel="noopener noreferrer" className="social-link">
-                            <i className="fab fa-twitter"></i>
-                        </a>
                     </div>
                 </div>
             </div>
