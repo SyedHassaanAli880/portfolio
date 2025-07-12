@@ -12,6 +12,7 @@
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 footer {
   background-color: #333333;
   color: #ffffff;
@@ -32,6 +33,11 @@ footer a {
 footer a:hover {
   color: #ffffff;
 }
+=======
+.footer {
+    background-color: #1a1a1a;
+  }
+>>>>>>> a3f7f21c082f6a839d6fc827af07a09cad97832e
   
   .social-link {
     color: #00ffc3;

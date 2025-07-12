@@ -37,11 +37,10 @@
     text-align: center;
 }
 
-/* Name Styling */
+/*Name Styling*/
 .name {
     font-size: 3rem;
     font-weight: bold;
-    color: #00ffc3; /* Vibrant color for the name */
     margin: 0;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 255, 195, 0.3);
@@ -94,25 +93,6 @@
     animation: fadeIn 5s ease-out;
     text-align: left; /* Ensure text alignment is left */
     display: block; /* Ensure it's treated as a block-level element */
-}
-
-.hobbies{
-    font-size: 1.2rem;
-    margin-right: 918px;
-    color: #ffffff; /* Keep the text white for readability */
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
-    animation: fadeIn 5s ease-out;
-}
-
-/* Hobbies List Styling */
-.hobbies-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.hobbies-list li {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
 }
 
 /* Connect Section Styling */

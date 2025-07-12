@@ -10,7 +10,7 @@ const Footer = () => {
             <span style={{ color: '#fff' }}>Designed and developed by Syed Hassaan Ali</span>
           </Col>
           <Col xs={12} md={4} className="text-center mb-2 mb-md-0">
-            <span style={{ color: '#fff' }}>&copy; 2024</span>
+            <span style={{ color: '#fff' }}>&copy; 2025</span>
           </Col>
           <Col xs={12} md={4} className="text-md-end text-center">
             <a href="https://github.com/SyedHassaanAli880" target="_blank" rel="noopener noreferrer" className="text-light me-3">
@@ -22,7 +22,7 @@ const Footer = () => {
             <a href="https://x.com/hassanali520" target="_blank" rel="noopener noreferrer" className="text-light me-3">
               <i className="fab fa-twitter fa-lg"></i>
             </a>
-            <a href="https://www.upwork.com/freelancers/~your-profile" target="_blank" rel="noopener noreferrer" className="text-light">
+            <a href="https://www.upwork.com/freelancers/~01ce67a365fb2f9e53" target="_blank" rel="noopener noreferrer" className="text-light">
               <i className="fab fa-upwork fa-lg"></i>
             </a>
           </Col>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
-import profilePicture from './PortfolioPicture.jpg'; // Update the path to your image
+import profilePicture from './PortfolioPicture.jpg';
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const Home = () => {
     return (
