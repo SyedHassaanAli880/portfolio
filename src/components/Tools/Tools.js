@@ -8,12 +8,12 @@ import entityframeworkcoreLogo from './entityframeworkcore.png';
 import postmanLogo from './postman.png';
 import reactLogo from './react.png';
 import restapiLogo from './restapi.png';
-import sqlserverLogo from './sqlserver.png';
+import sqlserverLogo from './sqlserver.jpeg';
 import githubdesktopLogo from './GitHubDesktop.png';
 import csharp from './c#.png';
 import javascript from './JS.png';
-import vscodeLogo from './vscode.png';
-import visualstudioLogo from './visualstudio.png';
+import vscodeLogo from './vscode.jpeg';
+import visualstudioLogo from './visualstudio.jpeg';
 
 function DotNetCore3DLogo() {
   const texture = useLoader(THREE.TextureLoader, process.env.PUBLIC_URL + '/dotnetcore.png');
