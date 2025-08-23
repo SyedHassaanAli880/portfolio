@@ -8,6 +8,7 @@ import Tools from './components/Tools/Tools';
 import Resume from './components/Resume/Resume';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Testimonials from './components/Testimonials/Testimonials';
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
       <Projects />
       <Tools />
       <Resume />
+      <Testimonials />
       <Contact />
       <Footer />
     </>
