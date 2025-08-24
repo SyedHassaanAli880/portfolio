@@ -10,6 +10,18 @@ import globalPostImage3 from '../../assets/global post/6.png';
 import globalPostSSPImage1 from '../../assets/global post ssp/image (1).png';
 import globalPostSSPImage2 from '../../assets/global post ssp/image (2).png';
 import globalPostSSPImage3 from '../../assets/global post ssp/image (3).png';
+// Paydrent project images
+import paydrentImage1 from '../../assets/paydrent/Screenshot 2025-08-24 205304.png';
+import paydrentImage2 from '../../assets/paydrent/Screenshot 2025-08-24 205331.png';
+import paydrentImage3 from '../../assets/paydrent/Screenshot 2025-08-24 205343.png';
+import paydrentImage4 from '../../assets/paydrent/Screenshot 2025-08-24 205428.png';
+import paydrentImage5 from '../../assets/paydrent/Screenshot 2025-08-24 205445.png';
+import paydrentImage6 from '../../assets/paydrent/Screenshot 2025-08-24 211241.png';
+import paydrentImage7 from '../../assets/paydrent/Screenshot 2025-08-24 211254.png';
+import paydrentImage8 from '../../assets/paydrent/Screenshot 2025-08-24 211304.png';
+import paydrentImage9 from '../../assets/paydrent/Screenshot 2025-08-24 211317.png';
+import paydrentImage10 from '../../assets/paydrent/Screenshot 2025-08-24 211336.png';
+import paydrentImage11 from '../../assets/paydrent/Screenshot 2025-08-24 211406.png';
 import './Projects.css';
 
 const Projects = () => {
@@ -59,21 +71,29 @@ const Projects = () => {
         { type: 'image', src: maxipureImage2, alt: 'MaxiPure Screenshot 2' },
         { type: 'image', src: maxipureImage3, alt: 'MaxiPure Screenshot 3' }
       ]
+    },
+         {
+       id: 3,
+       title: 'Paydrent',
+       description: 'A modern payment and rental management system designed to streamline financial transactions and rental operations. This comprehensive web application provides users with an intuitive interface for managing payments, tracking rental agreements, and handling financial records. Built with cutting-edge web technologies to ensure security, reliability, and excellent user experience.',
+       imageUrl: paydrentImage1,
+       repoUrl: null,
+       liveUrl: 'https://app.paydrent.com/',
+       technologies: ['.NET', 'React.js', 'SQL Server', 'Web API', 'Payment Processing', 'Rental Management'],
+      gallery: [
+        { type: 'image', src: paydrentImage1, alt: 'Paydrent Screenshot 1' },
+        { type: 'image', src: paydrentImage2, alt: 'Paydrent Screenshot 2' },
+        { type: 'image', src: paydrentImage3, alt: 'Paydrent Screenshot 3' },
+        { type: 'image', src: paydrentImage4, alt: 'Paydrent Screenshot 4' },
+        { type: 'image', src: paydrentImage5, alt: 'Paydrent Screenshot 5' },
+        { type: 'image', src: paydrentImage6, alt: 'Paydrent Screenshot 6' },
+        { type: 'image', src: paydrentImage7, alt: 'Paydrent Screenshot 7' },
+        { type: 'image', src: paydrentImage8, alt: 'Paydrent Screenshot 8' },
+        { type: 'image', src: paydrentImage9, alt: 'Paydrent Screenshot 9' },
+        { type: 'image', src: paydrentImage10, alt: 'Paydrent Screenshot 10' },
+        { type: 'image', src: paydrentImage11, alt: 'Paydrent Screenshot 11' }
+      ]
     }
-    // {
-    //   id: 3,
-    //   title: 'Global Post Self Service Portal',
-    //   description: 'A comprehensive self-service portal for Global Post users to manage their shipments, track orders, view history, and handle account details. Built with modern web technologies to provide a seamless user experience.',
-    //   imageUrl: globalPostSSPImage1,
-    //   repoUrl: null,
-    //   liveUrl: null,
-    //   technologies: ['.NET', 'React.js', 'SQL Server', 'Web API'],
-    //   gallery: [
-    //     { type: 'image', src: globalPostSSPImage1, alt: 'Global Post SSP Screenshot 1' },
-    //     { type: 'image', src: globalPostSSPImage2, alt: 'Global Post SSP Screenshot 2' },
-    //     { type: 'image', src: globalPostSSPImage3, alt: 'Global Post SSP Screenshot 3' }
-    //   ]
-    // }
   ];
 
   const handleQuickView = (project) => {
